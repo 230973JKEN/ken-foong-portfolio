@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ken Foong – Digital Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Ken Foong</h1>
+    <p>Cybersecurity | Programming</p>
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+    <a href="Ken_Foong_Resume.pdf" download class="resume-btn">📄 Download Resume</a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="images/ken-foong.jpeg" alt="Ken Foong" class="profile-pic" />
+      <p>
+        I'm a diploma student in Infocomm & Security at Nanyang Polytechnic. I specialize in cybersecurity, cloud computing, and full‑stack development. AWS‑certified, I’m passionate about building secure, scalable systems.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span><span>Flask</span><span>AWS</span><span>MySQL</span>
+      <span>Security Testing</span><span>HTML/CSS</span><span>JavaScript</span>
+      <span>Linux</span><span>Windows</span>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certificate-gallery">
+      <img src="images/aws-cert.png" alt="AWS Certified" onclick="openCertificate('images/aws-cert.png')" />
+      <img src="images/google-cybersecurity-cert.jpg" alt="Google Cybersecurity" onclick="openCertificate('images/google-cybersecurity-cert.jpg')" />
+      <img src="images/google-data-cert.jpg" alt="Google Data Analytics" onclick="openCertificate('images/google-data-cert.jpg')" />
+      <img src="images/ite-cyber-cert.png" alt="ITE Cybersecurity Fundamentals" onclick="openCertificate('images/ite-cyber-cert.png')" />
+    </div>
+  </section>
+
+  <div id="certificateModal" class="modal" onclick="closeCertificate()">
+    <span class="close">&times;</span>
+    <img class="modal-certificate" id="certImage" />
+  </div>
+
+  <section id="resume">
+    <h2>Resume Highlights</h2>
+    <p>
+      I’m currently pursuing a Diploma in Infocomm & Security at Nanyang Polytechnic. I’ve earned multiple cybersecurity and cloud certifications, and I’m AWS-certified. I also serve as an Officer in St John Brigade Singapore, instructing cadets in first aid and leadership.
+    </p>
+    <ul>
+      <li>Built secure web apps with Flask, bcrypt, and MySQL</li>
+      <li>Skilled in Linux/Windows system administration</li>
+      <li>Experienced in vulnerability testing using OWASP ZAP</li>
+      <li>Practitioner of Taekwondo – 1st Dan Blackbelt</li>
+    </ul>
+  </section>
+
+  <section id="extras">
+    <h2>More About Me</h2>
+    <div class="accordion">
+      <button onclick="toggleAccordion(this)">🎓 Education</button>
+      <div class="panel">
+        <p><strong>Nanyang Polytechnic</strong> – Diploma in Infocomm & Security (2023 – Present)</p>
+        <p><strong>Bukit Panjang Govt. High School</strong> – GCE 'N' Levels (2019 – 2022), Raw: 9, Net: 7, 4 Distinctions</p>
+      </div>
+
+      <button onclick="toggleAccordion(this)">💼 Work Experience</button>
+      <div class="panel">
+        <p><strong>RedMart</strong> – Warehouse Packer (2023)</p>
+        <p><strong>Invader</strong> – Flyer Distributor (2023)</p>
+      </div>
+
+      <button onclick="toggleAccordion(this)">🏅 Achievements & Awards</button>
+      <div class="panel">
+        <ul>
+          <li>Edusave Merit Bursary (2020 & 2021)</li>
+          <li>Friend of the School Award</li>
+          <li>Edusave Character Award (Nominee)</li>
+          <li>ICAS English Merit Award</li>
+        </ul>
+      </div>
+
+      <button onclick="toggleAccordion(this)">🤝 Co-Curricular Activities</button>
+      <div class="panel">
+        <ul>
+          <li>Officer – St John Brigade Singapore (Since 2019)</li>
+          <li>First Aid Instructor – CFIC 2024</li>
+          <li>Taekwondo – 1st Dan Blackbelt</li>
+          <li>NYP Open House Volunteer (2024)</li>
+        </ul>
+      </div>
+
+      <button onclick="toggleAccordion(this)">🌐 Languages</button>
+      <div class="panel">
+        <ul>
+          <li>English – Professional</li>
+          <li>Chinese – Proficient</li>
+          <li>Cantonese – Moderate</li>
+        </ul>
+      </div>
+
+      <button onclick="toggleAccordion(this)">👤 Personal Details</button>
+      <div class="panel">
+        <p>Date of Birth: 12 Jan 2005<br>Gender: Male<br>Nationality: Singaporean<br>Marital Status: Single</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project" onclick="showModal('modal1')">
+      <h3>Healthcare Security Web Application</h3>
+      <img src="images/healthcare-app.png" alt="Healthcare App Screenshot" />
+      <p>Click for more details</p>
+    </div>
+    <div class="project" onclick="showModal('modal2')">
+      <h3>Sustainable Restaurant Management System</h3>
+      <img src="images/restaurant-system.png" alt="Restaurant System Screenshot" />
+      <p>Click for more details</p>
+    </div>
+  </section>
+
+  <section id="project-rationale">
+  <h2>Project Presentation Rationale</h2>
+  <p>
+    My digital portfolio is designed to go beyond aesthetics, providing a comprehensive narrative for each featured project that captures my technical growth, problem-solving approach, and impact. Each project section is thoughtfully curated with the following elements:
+  </p>
+  <ul>
+    <li><strong>Visuals:</strong> I include high-resolution screenshots that illustrate the user interface and core system components. These visuals are not just decorative—they provide context and help viewers grasp the functionality of each solution.</li>
+    <li><strong>Descriptions:</strong> I offer a concise summary of each project's purpose and my personal involvement, explaining my roles, responsibilities, and the project scope.</li>
+    <li><strong>Work Process:</strong> Within the project modals, I go in-depth about the technologies used—such as Flask, Python, MySQL, and OWASP ZAP—alongside code snippets that highlight key logic or security implementations. This reveals not only what I did, but how I approached building secure, maintainable systems.</li>
+    <li><strong>Outcomes:</strong> I showcase tangible results such as optimized performance (e.g., 30% response time improvement), project grades (e.g., A for final year modules), and technical milestones (e.g., bug fixes and system scaling). Reflections on lessons learned also emphasize my adaptability and commitment to continuous improvement.</li>
+  </ul>
+  <p>
+    This layered storytelling allows visitors—be it hiring managers or collaborators—to not only see my technical portfolio but to understand the journey, skills, and mindset behind each solution. It bridges the gap between code and communication, showing the true depth of my capabilities.
+  </p>
+</section>
+
+  <div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h3>Healthcare Security Web Application</h3>
+    <p><strong>Description:</strong> A secure web application designed for healthcare environments, ensuring protected login and data access.</p>
+    <p><strong>My Role:</strong> I developed the backend logic using Flask and MySQL, focusing on authentication, session handling, and security enforcement using OWASP principles.</p>
+    <p><strong>Work Process:</strong> I designed the database schema, implemented role-based access control (RBAC), and hashed passwords using bcrypt. I also used OWASP ZAP to identify and patch vulnerabilities.</p>
+    <p><strong>Outcomes:</strong></p>
+    <ul>
+      <li>Enhanced login performance by 30%</li>
+      <li>Eliminated 100% of security issues flagged by OWASP ZAP</li>
+      <li>Received commendation from instructor for secure design</li>
+    </ul>
+    <p><strong>Technologies:</strong> Flask, MySQL, HTML/CSS, bcrypt, OWASP ZAP</p>
+    <pre><code>// Flask route
+@app.route('/login')
+def login():
+    # Secure login
+    pass</code></pre>
+    <pre><code># Password hashing with bcrypt
+import bcrypt
+password = b"supersecret"
+hashed = bcrypt.hashpw(password, bcrypt.gensalt())</code></pre>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h3>Sustainable Restaurant Management System</h3>
+    <p><strong>Description:</strong> A command-line based inventory management tool for restaurants built using Python and OOP principles.</p>
+    <p><strong>My Role:</strong> I handled the full development lifecycle, from designing the item classes and user inputs to testing for data consistency across sessions.</p>
+    <p><strong>Work Process:</strong> Implemented CRUD operations using Python classes. Focused on modular, reusable code structure and real-world inventory scenarios.</p>
+    <p><strong>Outcomes:</strong></p>
+    <ul>
+      <li>Reduced mock inventory errors by over 50%</li>
+      <li>Achieved top marks for software design clarity</li>
+      <li>Strengthened understanding of OOP, file I/O, and system simulation</li>
+    </ul>
+    <p><strong>Technologies:</strong> Python, CLI, Object-Oriented Programming</p>
+    <pre><code>class InventoryItem:
+    def __init__(self, name, quantity):
+        self.name = name
+        self.quantity = quantity</code></pre>
+    <pre><code>// VLAN Configuration Example
+interface FastEthernet0/1
+switchport mode access
+switchport access vlan 10</code></pre>
+  </div>
+</div>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <ul>
+      <li>Email: 230973j@mymail.nyp.edu.sg</li>
+      <li>Phone: +65 8821 2768</li>
+      <li><a href="https://www.linkedin.com/in/ken-foong-8a0043330/">LinkedIn</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ken Foong</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
