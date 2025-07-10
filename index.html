@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ken Foong – Digital Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
@@ -63,10 +63,13 @@
       I’m currently pursuing a Diploma in Infocomm & Security at Nanyang Polytechnic. I’ve earned multiple cybersecurity and cloud certifications, and I’m AWS-certified. I also serve as an Officer in St John Brigade Singapore, instructing cadets in first aid and leadership.
     </p>
     <ul>
-      <li>Built secure web apps with Flask, bcrypt, and MySQL</li>
-      <li>Skilled in Linux/Windows system administration</li>
-      <li>Experienced in vulnerability testing using OWASP ZAP</li>
-      <li>Practitioner of Taekwondo – 1st Dan Blackbelt</li>
+          <li>Developed secure applications using Flask, MySQL, and bcrypt</li>
+    <li>Experienced with OWASP ZAP for identifying security flaws</li>
+    <li>Strong grasp of networking concepts including VLANs and subnetting</li>
+    <li>Skilled in database design, system administration (Linux & Windows), and cloud services (AWS)</li>
+    <li>Proficient in front-end and back-end web development using Python, HTML, CSS, and JavaScript</li>
+    <li>Proven team player with leadership experience from serving as an Officer and First Aid Instructor in St John Brigade Singapore</li>
+    <li>Capable communicator and presenter, with experience translating technical insights to non-technical audiences</li>
     </ul>
   </section>
 
@@ -100,6 +103,7 @@
         <ul>
           <li>Officer – St John Brigade Singapore (Since 2019)</li>
           <li>First Aid Instructor – CFIC 2024</li>
+          <li>Instructor for leadership camp</li>
           <li>Taekwondo – 1st Dan Blackbelt</li>
           <li>NYP Open House Volunteer (2024)</li>
         </ul>
@@ -135,34 +139,20 @@
     </div>
   </section>
 
-  <section id="project-rationale">
-  <h2>Project Presentation Rationale</h2>
-  <p>
-    My digital portfolio is designed to go beyond aesthetics, providing a comprehensive narrative for each featured project that captures my technical growth, problem-solving approach, and impact. Each project section is thoughtfully curated with the following elements:
-  </p>
-  <ul>
-    <li><strong>Visuals:</strong> I include high-resolution screenshots that illustrate the user interface and core system components. These visuals are not just decorative—they provide context and help viewers grasp the functionality of each solution.</li>
-    <li><strong>Descriptions:</strong> I offer a concise summary of each project's purpose and my personal involvement, explaining my roles, responsibilities, and the project scope.</li>
-    <li><strong>Work Process:</strong> Within the project modals, I go in-depth about the technologies used—such as Flask, Python, MySQL, and OWASP ZAP—alongside code snippets that highlight key logic or security implementations. This reveals not only what I did, but how I approached building secure, maintainable systems.</li>
-    <li><strong>Outcomes:</strong> I showcase tangible results such as optimized performance (e.g., 30% response time improvement), project grades (e.g., A for final year modules), and technical milestones (e.g., bug fixes and system scaling). Reflections on lessons learned also emphasize my adaptability and commitment to continuous improvement.</li>
-  </ul>
-  <p>
-    This layered storytelling allows visitors—be it hiring managers or collaborators—to not only see my technical portfolio but to understand the journey, skills, and mindset behind each solution. It bridges the gap between code and communication, showing the true depth of my capabilities.
-  </p>
-</section>
 
   <div id="modal1" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modal1')">&times;</span>
     <h3>Healthcare Security Web Application</h3>
-    <p><strong>Description:</strong> A secure web application designed for healthcare environments, ensuring protected login and data access.</p>
-    <p><strong>My Role:</strong> I developed the backend logic using Flask and MySQL, focusing on authentication, session handling, and security enforcement using OWASP principles.</p>
-    <p><strong>Work Process:</strong> I designed the database schema, implemented role-based access control (RBAC), and hashed passwords using bcrypt. I also used OWASP ZAP to identify and patch vulnerabilities.</p>
+    <p><strong>Description:</strong> A secure, role-based web application designed for healthcare environments, emphasizing protection of sensitive patient data through strong authentication and authorization techniques.</p>
+    <p><strong>My Role:</strong> I developed the entire backend using Flask and MySQL, designed database structures, implemented secure login using bcrypt, and integrated OWASP ZAP for penetration testing.</p>
+    <p><strong>Work Process:</strong> I began by researching healthcare security standards like HIPAA to inform the system's access control and data protection strategies. I used an agile approach—planning user flows, creating mockups, and validating design choices. I wrote modular code for scalability and tested it iteratively, refining functions based on feedback and test outcomes.</p>
+    <p><strong>Non-Technical Experience:</strong> This project tested both my time management and teamwork skills. I frequently discussed challenges with peers and advisors, especially when dealing with security vulnerabilities. I also prepared a formal presentation and demo, which taught me how to clearly communicate technical achievements to non-technical stakeholders. Solving real security problems under a tight deadline helped build my confidence in high-pressure situations.</p>
     <p><strong>Outcomes:</strong></p>
     <ul>
-      <li>Enhanced login performance by 30%</li>
-      <li>Eliminated 100% of security issues flagged by OWASP ZAP</li>
-      <li>Received commendation from instructor for secure design</li>
+      <li>Improved authentication performance by 30% through query optimization</li>
+      <li>Fixed all critical vulnerabilities identified by OWASP ZAP</li>
+      <li>Earned recognition for professional documentation and secure implementation</li>
     </ul>
     <p><strong>Technologies:</strong> Flask, MySQL, HTML/CSS, bcrypt, OWASP ZAP</p>
     <pre><code>// Flask route
@@ -177,20 +167,21 @@ hashed = bcrypt.hashpw(password, bcrypt.gensalt())</code></pre>
   </div>
 </div>
 
-<div id="modal2" class="modal">
+  <div id="modal2" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modal2')">&times;</span>
     <h3>Sustainable Restaurant Management System</h3>
-    <p><strong>Description:</strong> A command-line based inventory management tool for restaurants built using Python and OOP principles.</p>
-    <p><strong>My Role:</strong> I handled the full development lifecycle, from designing the item classes and user inputs to testing for data consistency across sessions.</p>
-    <p><strong>Work Process:</strong> Implemented CRUD operations using Python classes. Focused on modular, reusable code structure and real-world inventory scenarios.</p>
+    <p><strong>Description:</strong> A command-line application built in Python to manage restaurant inventory efficiently, applying object-oriented design and simulating real-time item tracking and adjustments.</p>
+    <p><strong>My Role:</strong> I led the software design, implemented inventory CRUD operations, structured the program using OOP principles, and tested real-world scenarios to ensure system reliability.</p>
+    <p><strong>Work Process:</strong> I mapped out real restaurant workflows before writing any code. Using UML-like diagrams helped clarify the relationships between classes. I paid special attention to usability, ensuring that staff with minimal tech experience could interact with the CLI intuitively. File I/O was used for data persistence, and all logic was written to be modular and easily upgradable.</p>
+    <p><strong>Non-Technical Experience:</strong> I immersed myself in the restaurant environment to better understand operational pain points. Collaborating with peers on design ideas helped me refine my ability to listen, interpret feedback, and communicate solutions clearly. I also built patience and problem-solving resilience by debugging tricky edge cases with inventory data resets. Documenting and reflecting on my process improved my clarity in explaining software logic in layman's terms.</p>
     <p><strong>Outcomes:</strong></p>
     <ul>
-      <li>Reduced mock inventory errors by over 50%</li>
-      <li>Achieved top marks for software design clarity</li>
-      <li>Strengthened understanding of OOP, file I/O, and system simulation</li>
+      <li>Decreased simulated inventory discrepancies by over 50%</li>
+      <li>Earned top evaluation for practical and user-focused software design</li>
+      <li>Deepened my understanding of Python, modular design, and UX thinking</li>
     </ul>
-    <p><strong>Technologies:</strong> Python, CLI, Object-Oriented Programming</p>
+    <p><strong>Technologies:</strong> Python, CLI, Object-Oriented Programming, File I/O</p>
     <pre><code>class InventoryItem:
     def __init__(self, name, quantity):
         self.name = name
